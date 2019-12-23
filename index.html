@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="application-root"></div>
+
+<script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+
+    <script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+
+<script type="text/babel">
+  const appRoot = document.querySelector('#application-root');
+
+const helloWorldH1 = <h1>Hello, world</h1>;
+
+function App(args) {
+  console.log(args)
+  return (
+    
+    <main>
+    <h2>{args.studentName}</h2>
+      {args.children}
+    </main>
+  );
+}
+
+ReactDOM.render(<App className='myclass' studentName='sally'>
+    <header>
+      <h1>Resume</h1>
+    </header>
+    <main>
+      <section>
+        <img src={"https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"}width="500" height="750"
+        alt="Picture of Sally Student"/>
+        <h2>Contact Info</h2>
+        <div>
+          <p>sally</p>
+          <address>
+          <a href={"mailto:sallystudent@sally.com"}>sallystudent@sally.com</a>
+          <br/>
+          <a href={"tel:12983766578"}>1(298)376-6578</a>
+          </address>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education History</h2>
+        <div>
+          <p>2012-2016</p>
+            <a href="mines.edu">Colorado School of Mines</a>
+            <br/>Degree recieved: Underwater basket weaving
+        </div>
+      </section>
+
+      <section>
+        <h2>Employment History</h2>
+        <p>2010-2016</p>
+        <p>
+          Manager at The Emporium Pool Hall.
+          <br/>Charged with ensuring all pool hall operations run smoothly and with minimal underage drinking and drug use. 
+        </p>
+        <p>2017-2018</p>
+        <p>
+          Frozen Banana specialist at the Bluth Frozen Banana Stand.
+          <br/>Engaged in quality control to ensure proper freezing of bananas to maintain correct consistency and flavor.
+        </p>
+      </section>
+    </main>
+</App>, appRoot);
+
+ 
+  </script>
+  </body>
+</html>
